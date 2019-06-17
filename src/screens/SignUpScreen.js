@@ -38,7 +38,9 @@ export default class SignUpScreen extends Component {
 			})
         }
         else{
-            emailError: null   
+            this.setState({
+				emailError: null
+			})   
         }
     }
     checkPassword = () => {
@@ -51,7 +53,9 @@ export default class SignUpScreen extends Component {
 			})
         }
         else{
-            passwordError: null
+            this.setState({
+				passwordError: null
+			})
         }
         
     }
@@ -66,7 +70,9 @@ export default class SignUpScreen extends Component {
 			})
         }
         else{
-            ageError: null
+            this.setState({
+				ageError: null
+			})
         }
     }
     
