@@ -36,44 +36,42 @@ export default class SignUpScreen extends Component {
 			this.setState({
 				emailError: 'Invalid Email'
 			})
-        }
-        else{
-            this.setState({
-				emailError: null
-			})   
-        }
+		}
+		else{
+		    this.setState({
+					emailError: null
+				})   
+		}
     }
     checkPassword = () => {
-        const { password } = this.state;
-       // const  re = null;  // min 6 chars
-        //const isValid = re.test(String(password));
-        if(password.length<6) {
-			this.setState({
-				passwordError: 'Password minimum 6 digit'
-			})
-        }
-        else{
-            this.setState({
-				passwordError: null
-			})
-        }
+		const { password } = this.state;
+		if(password.length<6) {
+				this.setState({
+					passwordError: 'Password minimum 6 digit'
+				})
+		}
+		else{
+		    this.setState({
+					passwordError: null
+				})
+		}
         
     }
     checkAge = () => {
-        const {age} = this.state;
-        const re = /^[0-9]*$/;
-        const isValid = re.test(age);
+		const {age} = this.state;
+		const re = /^[0-9]*$/;
+		const isValid = re.test(age);
 
-        if(!isValid) {
-			this.setState({
-				ageError: 'Number only'
-			})
-        }
-        else{
-            this.setState({
-				ageError: null
-			})
-        }
+		if(!isValid) {
+				this.setState({
+					ageError: 'Number only'
+				})
+		}
+		else{
+		    this.setState({
+					ageError: null
+				})
+		}
     }
     
     signUpUser = () => {
